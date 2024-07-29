@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obtener Alumno y Tamagotchi</title>
+</head>
+<body>
+<button id="getAlumno">Obtener Alumno</button>
+<div id="alumnoInfo"></div>
+
+<script>
+    document.getElementById('getAlumno').addEventListener('click', function() {
+        fetch('/alumno')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('alumnoInfo').innerText = JSON.stringify(data);
+            })
+            .catch(error => console.error('Error:', error));
+    });
+</script>
+
+<button id="getAlumno2">Obtener Alumno2</button>
+<div id="alumno2Info"></div>
+
+<script>
+    document.getElementById('getAlumno2').addEventListener('click', function() {
+        fetch('/alumno2')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('alumno2Info').innerText = JSON.stringify(data);
+            })
+            .catch(error => console.error('Error:', error));
+    });
+</script>
+<button id="getTamagotchi">Tamagotchi</button>
+<div id="tamagotchiInfo"></div>
+
+<script>
+    document.getElementById('getTamagotchi').addEventListener('click', function() {
+        fetch('/tama')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('tamagotchiInfo').innerText = JSON.stringify(data);
+            })
+            .catch(error => console.error('Error:', error));
+    });
+</script>
+
+</body>
+</html>
