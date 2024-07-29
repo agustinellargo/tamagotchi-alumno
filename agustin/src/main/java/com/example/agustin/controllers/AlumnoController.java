@@ -22,7 +22,9 @@ public class AlumnoController {
     }
     @GetMapping("/crearUsuario")
     public Alumno crearUsuario(){
-        return this.tamagotchiService.crearTamagotchi();
-    }
+       //  la linea de abajo esta mal
+        //  solo he puesto esto para repararlo en la mayor brevedad posible
+        //  return this.tamagotchiService.crearTamagotchi();
+        return this.alumnoService.getAlumno();}
 
 }
