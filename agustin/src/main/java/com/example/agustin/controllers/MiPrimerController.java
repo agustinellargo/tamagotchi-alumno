@@ -11,9 +11,8 @@ public class MiPrimerController {
     TamagotchiService tamagotchiService;
 
     @Autowired
-    public MiPrimerController(TamagotchiService tamagotchiService){
+    public MiPrimerController(TamagotchiService tamagotchiService) {
         this.tamagotchiService = tamagotchiService;
-
     }
 
     @GetMapping("/mensaje")
