@@ -18,19 +18,6 @@
     });
 </script>
 
-<button id="getAlumno2">Obtener Alumno2</button>
-<div id="alumno2Info"></div>
-
-<script>
-    document.getElementById('getAlumno2').addEventListener('click', function() {
-        fetch('/alumno2')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('alumno2Info').innerText = JSON.stringify(data);
-            })
-            .catch(error => console.error('Error:', error));
-    });
-</script>
 <button id="getTamagotchi">Tamagotchi</button>
 <div id="tamagotchiInfo"></div>
 
