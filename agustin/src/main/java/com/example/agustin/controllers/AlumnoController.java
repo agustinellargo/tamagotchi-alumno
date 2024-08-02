@@ -34,8 +34,12 @@ public class AlumnoController {
     public Alumno usuarioRandom(@PathVariable String nombre){
         return alumnoService.usuarioRandom(nombre);
     }
-    @GetMapping("/listado/")
+    @GetMapping("/listado")
     public List<Alumno> getlistado(){
         return alumnoService.listaAlumnos();
+    }
+    @GetMapping("/alumnoId/{id}")
+    public Alumno alumnoId(@PathVariable int id){
+        return alumnoService.alumnoId(id);
     }
 }

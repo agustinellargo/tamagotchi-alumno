@@ -43,4 +43,7 @@ public class AlumnoService {
     public List<Alumno> listaAlumnos(){
         return listado;
     }
+    public Alumno alumnoId(int id){
+        return listado.get(id);
+    }
 }
