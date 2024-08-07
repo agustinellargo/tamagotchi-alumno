@@ -3,10 +3,7 @@ package com.example.agustin.controllers;
 import com.example.agustin.models.Alumno;
 import com.example.agustin.service.AlumnoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,6 +28,11 @@ public class AlumnoController {
                                @RequestParam String ciudad) {
 
         return alumnoService.crearUsuario(nombre,edad,curso,ciudad);
+    }
+
+    @PostMapping("/crearusuario")
+    public Alumno crearUsuario(@RequestBody Alumno alumno) {
+        return alumnoService.crearAlumno(alumno);
     }
 
     @GetMapping("/usuarioRandom/{nombre}")

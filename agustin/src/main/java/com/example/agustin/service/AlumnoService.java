@@ -47,4 +47,10 @@ public class AlumnoService {
     public List<Alumno> listaAlumnos(){
         return listado;
     }
+
+    public Alumno crearAlumno(Alumno alumno) {
+        System.out.println("me conecto a base de datos, inserto el alumno nuevo y te devuelvo el alumno insertado");
+        alumno.setCiudad("Jerez");
+        return alumno;
+    }
 }
